@@ -1,0 +1,7 @@
+dependencies:
+  - name: frontend
+    version: 0.0.1
+    repository: "@local"
+  - name: backend
+    version: 0.0.1
+    repository: "@local"

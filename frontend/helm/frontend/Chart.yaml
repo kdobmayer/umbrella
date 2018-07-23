@@ -1,0 +1,13 @@
+apiVersion: v1
+name: frontend
+version: 0.0.1
+description: frontend application
+keywords:
+  - frontend
+  - tutorial
+sources:
+  - https://github.com/kdobmayer/umbrella
+maintainers:
+  - name: Krisztian Dobmayer
+    email: dobmayer.krisztian@gmail.com
+appVersion: 0.0.1

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: multi
+    tier: backend
+spec:
+  selector:
+    matchLabels:
+      app: multi
+      tier: backend
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: multi
+        tier: backend
+    spec:
+      containers:
+      - name: backend
+        image: "kdobmayer/backend:{{ .Values.image.tag }}"
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        env:
+        - name: GET_HOSTS_FROM
+          value: dns
+        ports:
+        - containerPort: 8080
